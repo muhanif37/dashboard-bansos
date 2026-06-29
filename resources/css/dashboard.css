@@ -1,0 +1,40 @@
+/**
+ * Tambahkan ke resources/css/app.css atau buat file baru
+ * resources/css/dashboard.css (lalu import di app.css)
+ *
+ * Overrides komponen dashboard agar selaras dengan
+ * layout glassmorphism navy-burgundy
+ */
+
+/* ===== CARD GLASS ===== */
+/* Semua .bg-white.border.rounded-xl → card glass */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.15),
+        0 1px 0 rgba(255, 255, 255, 0.8) inset !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===== TOPBAR ACTION BUTTON (Unduh Excel) ===== */
+/* Override button di topbar agar sesuai tema gelap */
+.topbar-action-btn {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.topbar-action-btn:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ===== PAGINATION ===== */
+/* Agar pagination terlihat di atas background gelap */
+.pagination-wrapper {
+    background: rgba(248, 250, 252, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
